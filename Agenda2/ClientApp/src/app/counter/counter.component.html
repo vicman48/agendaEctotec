@@ -1,0 +1,45 @@
+<!--<h1>Counter</h1>
+
+<p>This is a simple example of an Angular component.</p>
+
+<p>Current count: <strong>{{ currentCount }}</strong></p>
+
+<button (click)="incrementCounter()">Increment</button>-->
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre Completo</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registros of getRegistros">
+      <th scope="row">1</th>
+      <td>{{ registros.nombre }}</td>
+      <td>{{ registros.telefono }}</td>
+      <td>{{ registros.direccion }}</td>
+      <td>{{ registros.ciudad }}</td>
+      <td>{{ registros.estado }}</td>
+      <td><button (click)="onTapRegistros(registros)">Editar</button><button (click)="onTapEliminar(registros.nombre)">Eliminar</button></td>
+    </tr>
+    <!--<tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>-->
+  </tbody>
+</table>
